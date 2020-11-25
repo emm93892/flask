@@ -5,7 +5,6 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg
 import io
 
 # 円グラフを描画
-
 def func():
     x = np.array([100, 200, 300, 400, 500])
     fig1, ax1 = plt.subplots()
