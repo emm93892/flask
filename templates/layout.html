@@ -1,13 +1,26 @@
 <!-- Header -->
     {% include "header.html" %}
 
-<!-- SelectSubject Start -->
-    <div class="SelectSubject">
-        <b>科目を選ぶところ</b>
-    </div>
-<!-- SelectSubject End -->
+
 
 <!-- Body Start -->
+    <div class="box1">
+    <!-- SelectSubject Start -->
+        <div class="SelectSubject">
+            <b>科目を選ぶところ</b>
+        </div>
+    <!-- SelectSubject End -->
+
+    <!-- ItemScroll Start -->
+        <div class="ItemScrollBox">
+            <div class="ItemScroll">
+                <b>アンケート項目を表示するところ</b>
+            </div>
+        </div>
+    <!-- ItemScroll End -->
+    </div>
+
+    <div class="box2">
     <!-- Tab Start -->
         <div class="area">
             <input type="radio" name="tab_name" id="tab1" checked>
@@ -28,12 +41,7 @@
         </div>
     <!-- Tab End -->
 
-    <!-- ItemScroll Start -->
-        <div class="ItemScroll">
-           <b>アンケート項目を表示するところ</b>
-        </div>
-    <!-- ItemScroll End -->
-
+    <div class="box4">
     <!-- PullDown Start -->
         <div class="PullDown">
             <!-- PercentSort PullDown Start -->
@@ -58,21 +66,6 @@
         </div>
     <!-- PullDown End -->
 
-    <!-- ResultArea Start -->
-        <div class="Result">
-            <b>結果を表示するところ</b>
-        </div>
-    <!-- ResultArea End -->
-
-    <!-- GraphArea Start -->
-        <div class="Graph">
-            <b>グラフを表示するところ</b>
-            <div class="circle">
-                <img src="http://127.0.0.1:5000/graph.png" alt=""/>
-            </div>
-        </div>
-    <!-- GraphArea End -->
-
     <!-- OnOff Button Start -->
         <div class="switchArea">
           <input type="checkbox" id="switch1">
@@ -80,4 +73,26 @@
           <div id="swImg"></div>
         </div>
     <!-- OnOff Button End -->
+    </div>
+
+    <!-- ResultArea Start -->
+        <div class="ResultArea">
+            <div class="Result">
+                <b>結果を表示するところ</b>
+            </div>
+        </div>
+    <!-- ResultArea End -->
+    </div>
+
+    <div class="box3">
+    <!-- GraphArea Start -->
+        <div class="Graph">
+            <b>グラフを表示するところ</b>
+            <div class="img">
+                <img src="http://127.0.0.1:5000/graph.png" alt=""/>
+            </div>
+        </div>
+    <!-- GraphArea End -->
+    </div>
+
 
