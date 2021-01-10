@@ -36,11 +36,13 @@
 
 /* Body Start */
 
+    html, body{ height: 92%}
+
     /* box1 Start */
         .box1{
             float:left;
-            width:15%;
-	        height:auto;
+            width:18%;
+	        height:100%;
 	        padding-top:1%;
         }
 
@@ -50,13 +52,13 @@
                 top:100px;
                 left:20px;*/
                 width:100%;
-                height:355px;
+                height:100%;
                 background-color:#def7ff;
                 overflow-y: scroll;
                 padding: 1rem;
             }
         /* SelectSubject End */
-        /* ItemScroll Start */
+        /* ItemScroll Start
             .ItemScrollBox {
                 padding-top  : 5%;
             }
@@ -67,17 +69,18 @@
                 overflow-y: scroll;
                 padding: 1rem;
             }
-        /* ItemScroll End */
+        /* ItemScroll End
     /* box1 End */
 
     /* box2 Start */
         .box2{
             float:left;
-            width:45%;
-	        height:auto;
+            width:50%;
+	        height:100%;
             padding-top:1%;
             padding-left: 5%;
             position: relative;
+            margin-left:2% ;
         }
 
         /* Tab Start */
@@ -116,17 +119,17 @@
                 display: block;
             }
         /* Tab End */
+            .box4 {
+                height: 20%;
+            }
 
         /* PullDown Start */
             .PullDown {
-                display: flex;
-                flex-wrap: nowrap;
+                display: block;
                 padding-top: 5%;
             }
 
         /* PercentPullDown Start */
-            .PercentSort {
-            }
         /* PercentPullDown End */
         /* WordCountPullDown Start */
         /* WordCountPullDown End */
@@ -140,7 +143,7 @@
                     font-size      : 26px;                /* 文字サイズ         */
 
                     position       : relative;
-                    top            : -35px;
+                    top            : -75px;
                     left           : 35%;
                     margin         : auto;                /* 中央寄せ           */
                     width          : 150px;               /* ボタンの横幅       */
@@ -203,37 +206,59 @@
             .ResultArea {
                 width         : 100%;
                 position      : relative;
-                top           : -25px;
+                height        : 66%;
+                display: inline-block;
+                /*top           : -25px;*/
             }
             .Result {
-                height             : 630px;
+                height             : 100%;
                 background-color   : #def7ff;
                 overflow-y         : scroll;
                 padding            : 5%;
             }
+            /* Table */
+            table {
+                text-align   : center;
+                border       : solid 2px black;
+            }
+            .table th{
+                text-align       : center;
+                background       : #67bcdb;
+                border           : dashed 1px black;
+            }
+            .table td {
+                border           : dashed 1px black;
+            }
+            /* Table End */
         /* ResultArea End */
     /* box2 End */
 
     /* box3 Start */
         .box3{
             float         : left;
-            width         : 30%;
+            width         : 18%;
 	        height        : auto;
-            padding-top   : 10%;
+            padding-top   : 1%;
             padding-left  : 3%;
-            padding-right : 1%;
         }
         /* GraphArea Start */
             .Graph {
                 width       : 100%;
-                height      : 630px;
+                height      : 40%;
                 background  : #def7ff;
                 padding     : 1rem;
             }
             .img img {
-                width     : 50%;
+                width     :100%;
             }
         /* GraphArea End */
     /* box3 End */
 
+    /* list */
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    /* list End */
 /* Body End */

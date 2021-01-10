@@ -1,23 +1,15 @@
-<!-- Header -->
-    {% include "header.html" %}
-
-
+{% include "header.html" %}
 
 <!-- Body Start -->
     <div class="box1">
     <!-- SelectSubject Start -->
         <div class="SelectSubject">
             <b>科目を選ぶところ</b>
+            <p>全て表示</p>
+            {% block className_block %}
+            {% endblock %}
         </div>
     <!-- SelectSubject End -->
-
-    <!-- ItemScroll Start -->
-        <div class="ItemScrollBox">
-            <div class="ItemScroll">
-                <b>アンケート項目を表示するところ</b>
-            </div>
-        </div>
-    <!-- ItemScroll End -->
     </div>
 
     <div class="box2">
@@ -25,41 +17,55 @@
         <div class="area">
             <input type="radio" name="tab_name" id="tab1" checked>
             <label class="tab_class" for="tab1">ALL</label>
-            <div class="content_class">
+            <!--<div class="content_class">
                 <p>タブ1のコンテンツを表示します</p>
-            </div>
+            </div>-->
             <input type="radio" name="tab_name" id="tab2" >
             <label class="tab_class" for="tab2">ポジティブ</label>
-            <div class="content_class">
+            <!--<div class="content_class">
                 <p>タブ2のコンテンツを表示します</p>
-            </div>
+            </div>-->
             <input type="radio" name="tab_name" id="tab3" >
             <label class="tab_class" for="tab3">ネガティブ</label>
-            <div class="content_class">
+            <!--<div class="content_class">
                 <p>タブ3のコンテンツを表示します</p>
-            </div>
+            </div>-->
         </div>
     <!-- Tab End -->
 
     <div class="box4">
     <!-- PullDown Start -->
-        <div class="PullDown">
+        <div class="sort">
             <!-- PercentSort PullDown Start -->
-                <div class="PercentSort">
-                    <select name="sort">
-                        <option hidden>%:昇順/降順</option>
-                        <option value="Asc">昇順</option>
-                        <option value="Desc">降順</option>
+                <div class="Pos_PercentSort">
+                    <select class="sort1">
+                        <option value="">ポジティブ　：昇順/降順</option>
+                        <option value="2,0">ポジティブ　：昇順</option>
+                        <option value="2,1">ポジティブ　：降順</option>
                     </select>
+                </div>
+                <div class="Neu_PercentSort">
+                        <select class="sort2">
+                            <option value="">ニュートラル：昇順/降順</option>
+                            <option value="3,0">ニュートラル：昇順</option>
+                            <option value="3,1">ニュートラル：降順</option>
+                        </select>
+                </div>
+                <div class="Neg_PercentSort">
+                        <select class="sort3">
+                            <option value="">ネガティブ　：昇順/降順</option>
+                            <option value="4,0">ネガティブ　：昇順</option>
+                            <option value="4,1">ネガティブ　：降順</option>
+                        </select>
                 </div>
             <!-- PercentSort PullDown End -->
 
             <!-- WordCountSort PullDown Start -->
                 <div class="WordCountSort">
-                    <select name="sort">
-                        <option hidden>文字数:昇順/降順</option>
-                        <option value="Asc">昇順</option>
-                        <option value="Desc">降順</option>
+                    <select class="sort4">
+                        <option value="">文字数　　　：昇順/降順</option>
+                        <option value="Asc">文字数　　　：昇順</option>
+                        <option value="Desc">文字数　　　：降順</option>
                     </select>
                 </div>
             <!-- WordCountSort PullDown End -->
@@ -79,6 +85,8 @@
         <div class="ResultArea">
             <div class="Result">
                 <b>結果を表示するところ</b>
+                {% block answer_block %}
+                {% endblock %}
             </div>
         </div>
     <!-- ResultArea End -->
