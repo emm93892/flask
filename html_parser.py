@@ -30,10 +30,15 @@ for col in range(len(cols_th)):
 # <td>タグにclassの挿入
 counter = 0
 for col in range(len(cols_td)):
+    # 回答の文字数の値を挿入
+    if col == 1 + 5 * counter:
+        td_data[col].attrs['class'] = '{sortValue: ' + format(len(td_string_data[col])) + '}'
+    # %の値を挿入
     if col == 2 + 5 * counter or col == 3 + 5 * counter or col == 4 + 5 * counter:
         td_data[col].attrs['class'] = '{sortValue: ' + td_string_data[col] + '}'
+    # カウントのインクリメント
     if col == 4 + 5 * counter:
-        counter += 1
+        counter +=1
     td_data[col].string = td_string_data[col]
 
 

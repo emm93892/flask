@@ -30,6 +30,19 @@ for index, item in enumerate(Neu_list):
     Pos_list[index] = Pos_list[index].rstrip('%')
     Neg_list[index] = Neg_list[index].rstrip('%')
 
+
+# それぞれのパーセンテージ計算
+Neu_count = 0
+Pos_count = 0
+Neg_count = 0
+for index in range(len(Neu_list)):
+    if Neu_list[index] > Pos_list[index] and Neu_list[index] > Neg_list[index]:
+        Neu_count += 1
+    elif Pos_list[index] > Neu_list[index] and Pos_list[index] > Neg_list[index]:
+        Pos_count += 1
+    elif Neg_list[index] > Neu_list[index] and Neg_list[index] > Pos_list[index]:
+        Neg_count += 1
+
 # listの作成
 df_table = pd.DataFrame({'科目名': className_list_original,
                          '回答': answer_list,

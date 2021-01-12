@@ -32,6 +32,9 @@
     a {
         text-decoration: none;
     }
+    .title{
+      margin-left: 10%;
+    }
 /* Header End */
 
 /* Body Start */
@@ -238,20 +241,26 @@
             float         : left;
             width         : 18%;
 	        height        : auto;
-            padding-top   : 1%;
-            padding-left  : 3%;
+            padding       : 1%;
+            margin-top    : 1%;
+            margin-left   : 1%;
+            background    : #def7ff;
         }
         /* GraphArea Start */
             .Graph {
                 width       : 100%;
                 height      : 40%;
-                background  : #def7ff;
-                padding     : 1rem;
+                padding     : 1%;
             }
             .img img {
                 width     :100%;
             }
         /* GraphArea End */
+        /* TotalNumberTable Start*/
+            .box3 table{
+
+            }
+        /* TotalNumberTable End */
     /* box3 End */
 
     /* list */

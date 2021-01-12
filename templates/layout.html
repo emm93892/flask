@@ -4,8 +4,8 @@
     <div class="box1">
     <!-- SelectSubject Start -->
         <div class="SelectSubject">
-            <b>科目を選ぶところ</b>
-            <p>全て表示</p>
+            <b>科目を選ぶところ</b><br>
+            <a class="all_apply" href="#">全て表示</a>
             {% block className_block %}
             {% endblock %}
         </div>
@@ -36,7 +36,7 @@
     <div class="box4">
     <!-- PullDown Start -->
         <div class="sort">
-            <!-- PercentSort PullDown Start -->
+            <!-- PercentSort PullDown  -->
                 <div class="Pos_PercentSort">
                     <select class="sort1">
                         <option value="">ポジティブ　：昇順/降順</option>
@@ -60,12 +60,12 @@
                 </div>
             <!-- PercentSort PullDown End -->
 
-            <!-- WordCountSort PullDown Start -->
+            <!-- WordCountSort PullDown  -->
                 <div class="WordCountSort">
                     <select class="sort4">
                         <option value="">文字数　　　：昇順/降順</option>
-                        <option value="Asc">文字数　　　：昇順</option>
-                        <option value="Desc">文字数　　　：降順</option>
+                        <option value="1,0">文字数　　　：昇順</option>
+                        <option value="1,1">文字数　　　：降順</option>
                     </select>
                 </div>
             <!-- WordCountSort PullDown End -->
@@ -101,6 +101,25 @@
             </div>
         </div>
     <!-- GraphArea End -->
+
+    <!-- Total number table -->
+        <div class="table">
+            <p>総数： {{ Neu+Pos+Neg }}</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ポジティブ数</th>
+                        <th>ニュートラル数</th>
+                        <th>ネガティブ数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% block TotalNumberTable %}
+                {% endblock %}
+                </tbody>
+            </table>
+        </div>
     </div>
+
 
 
